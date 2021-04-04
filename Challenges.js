@@ -38,3 +38,8 @@ const evenlyDivisible = (a, b, c) => {
   }
   return sum;
 };
+
+//Edabit: Obscure string challenge it takes 0.5 seconds to write a character (not including spaces).
+//Given the full sentence and the unfinished sentence as inputs, return the time it takes to finish writing in seconds.
+const timeToFinish = (f, p) =>
+  f === p ? 0 : f.slice(-(f.length - p.length)).replace(/\s/g, '').length * 0.5;

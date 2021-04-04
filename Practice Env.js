@@ -1,9 +1,2 @@
-const evenlyDivisible = (a, b, c) => {
-  let sum = 0;
-  for (let i = a; i <= b; i++) {
-    if (i % c === 0) {
-      sum += i;
-    }
-  }
-  return sum;
-};
+const timeToFinish = (f, p) =>
+  f === p ? 0 : f.slice(-(f.length - p.length)).replace(/\s/g, '').length * 0.5;
