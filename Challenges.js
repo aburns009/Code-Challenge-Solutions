@@ -55,3 +55,6 @@ const replaceVowel = word => {
   };
   return word.replace(/[aeiou]/g, x => vowel[x]);
 };
+
+//Edabit: find value within an array.
+const inBox = arr => arr.some(x => x.includes('*'));
