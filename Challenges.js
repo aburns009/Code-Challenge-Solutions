@@ -58,3 +58,16 @@ const replaceVowel = word => {
 
 //Edabit: find value within an array.
 const inBox = arr => arr.some(x => x.includes('*'));
+
+//Edabit: Return number of vege vs meat skewers
+const bbqSkewers = grill => {
+  const vege = grill.filter(x => x.includes('x')).length;
+  return [grill.length - vege, vege];
+};
+/*test bbqSkewers(
+["--oooo-ooo--", 
+"--xx--x--xx--", 
+"--o---o--oo--", 
+"--xx--x--ox--", 
+"--xx--x--ox--"]
+)*/

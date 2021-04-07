@@ -1,10 +1,4 @@
-const replaceVowel = word => {
-  const vowel = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  return word.replace(/[aeiou]/g, x => vowel[x]);
+const bbqSkewers = grill => {
+  const vege = grill.filter(x => x.includes('x')).length;
+  return [grill.length - vege, vege];
 };
