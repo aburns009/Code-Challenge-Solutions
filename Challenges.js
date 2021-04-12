@@ -71,3 +71,9 @@ const bbqSkewers = grill => {
 "--xx--x--ox--", 
 "--xx--x--ox--"]
 )*/
+
+//Edabit: filter duplicates and return the number of unique elements
+function equal(a, b, c) {
+  const solo = [...new Set(arguments)].length;
+  return solo === 2 ? 2 : solo === 3 ? 0 : 3;
+}
