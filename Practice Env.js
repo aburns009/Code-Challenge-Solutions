@@ -1,6 +1,4 @@
-function equal(a, b, c) {
-  const solo = [...new Set(arguments)].length;
-  return solo === 2 ? 2 : solo === 3 ? 0 : 3;
-}
-
-equal(7, 3, 7);
+const getMiddle = str => {
+  const mid = str.length / 2;
+  return str.length % 2 != 0 ? str[Math.floor(mid)] : str[mid - 1] + str[mid];
+};

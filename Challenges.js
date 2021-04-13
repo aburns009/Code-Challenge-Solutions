@@ -77,3 +77,9 @@ function equal(a, b, c) {
   const solo = [...new Set(arguments)].length;
   return solo === 2 ? 2 : solo === 3 ? 0 : 3;
 }
+
+//Edabit: return middle of a str of n.length
+const getMiddle = str => {
+  const mid = str.length / 2;
+  return str.length % 2 != 0 ? str[Math.floor(mid)] : str[mid - 1] + str[mid];
+};
