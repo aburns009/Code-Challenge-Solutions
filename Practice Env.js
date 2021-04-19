@@ -1,5 +1,5 @@
-const specialReverse = (s, c) =>
-  s
-    .split(' ')
-    .map(x => (x.startsWith(c) ? [...x].reverse().join('') : x))
-    .join(' ');
+const firstRepeat = chars => {
+  const dub = chars.match(/(\w)(?=.*\1)/);
+  return dub != null ? dub[0] : '-1';
+};
+firstRepeat('Galadriel');
