@@ -114,3 +114,12 @@ const sumMissingNumbers = arr => {
     if (!a.includes(i)) tot += i;
   return tot;
 };*/
+
+//Edabit: Replace value in array with values in str
+const uncensor = (str, vowels) => {
+  for (let i = 0; i < vowels.length; i++) {
+    str = str.replace('*', vowels[i]);
+  }
+  return str;
+};
+uncensor('Wh*r* d*d my v*w*ls g*?', 'eeioeo');

@@ -1,16 +1,7 @@
-const sumMissingNumbers = arr => {
-  let sum = 0;
-  const s = arr.sort((a, b) => a - b);
-  for (let i = arr[0]; i < s[s.length - 1]; i++) {
-    if (!s.includes(i)) {
-      sum += i;
-    }
+const uncensor = (str, vowels) => {
+  for (let i = 0; i < vowels.length; i++) {
+    str = str.replace('*', vowels[i]);
   }
-  return sum;
+  return str;
 };
-const sumMissingNumbers = a => {
-  let tot = 0;
-  for (let i = Math.min(...a) + 1, j = Math.max(...a); i < j; i++)
-    if (!a.includes(i)) tot += i;
-  return tot;
-};
+uncensor('Wh*r* d*d my v*w*ls g*?', 'eeioeo');
