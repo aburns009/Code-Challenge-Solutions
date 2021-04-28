@@ -123,3 +123,7 @@ const uncensor = (str, vowels) => {
   return str;
 };
 uncensor('Wh*r* d*d my v*w*ls g*?', 'eeioeo');
+
+//Edabit: find the difference between even and odd numbers in an array
+const warOfNumbers = arr =>
+  Math.abs(arr.reduce((a, b) => a - (b % 2 ? b : -b), 0));
