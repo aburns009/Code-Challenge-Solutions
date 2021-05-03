@@ -1,2 +1,2 @@
-const warOfNumbers = arr =>
-  Math.abs(arr.reduce((a, b) => a - (b != 0 ? b : -b), 0));
+const reversedBinaryInteger = num =>
+  parseInt(num.toString(2).split('').reverse().join(''), 2);
