@@ -131,3 +131,16 @@ const warOfNumbers = arr =>
 //Edabit: convert num to binary, reverse, convert to num
 const reversedBinaryInteger = num =>
   parseInt(num.toString(2).split('').reverse().join(''), 2);
+
+//Edabit: map through object array and multiply grocery quantity by price
+const getTotalPrice = groceries => {
+  let total = 0;
+  groceries.map(x => (total += x.quantity * x.price));
+  return +total.toFixed(1);
+};
+getTotalPrice([
+  { product: 'Milk', quantity: 1, price: 1.5 },
+  { product: 'Eggs', quantity: 12, price: 0.1 },
+  { product: 'Bread', quantity: 2, price: 1.6 },
+  { product: 'Cheese', quantity: 1, price: 4.5 },
+]);
