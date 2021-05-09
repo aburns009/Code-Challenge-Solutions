@@ -144,3 +144,16 @@ getTotalPrice([
   { product: 'Bread', quantity: 2, price: 1.6 },
   { product: 'Cheese', quantity: 1, price: 4.5 },
 ]);
+
+//Edabit: field goal challenge. determine if arrays contian specific character between index range
+const isGoalScored = goal =>
+  goal.slice(0, 3).some(x => x[0].indexOf('0') > 2 && x[0].indexOf('0') < 9);
+isGoalScored([
+  ['  #     #  '],
+  ['  #  0  #  '],
+  ['  #     #  '],
+  ['  #######  '],
+  ['     #     '],
+  ['     #     '],
+  ['     #     '],
+]);

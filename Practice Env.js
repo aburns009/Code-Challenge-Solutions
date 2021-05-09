@@ -1,5 +1,2 @@
-const getTotalPrice = groceries => {
-  let total = 0;
-  groceries.map(x => (total += x.quantity * x.price));
-  return +total.toFixed(1);
-};
+const isGoalScored = goal =>
+  goal.slice(0, 3).some(x => x[0].indexOf('0') > 2 && x[0].indexOf('0') < 9);
