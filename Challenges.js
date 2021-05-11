@@ -157,3 +157,10 @@ isGoalScored([
   ['     #     '],
   ['     #     '],
 ]);
+
+//Edabit: reverse all words with odd length in a string
+const reverseOdd = str =>
+  str
+    .split(' ')
+    .map(x => (x.length % 2 != 0 ? [...x].reverse.join('') : x))
+    .join(' ');
