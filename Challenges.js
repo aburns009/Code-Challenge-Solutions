@@ -164,3 +164,26 @@ const reverseOdd = str =>
     .split(' ')
     .map(x => (x.length % 2 != 0 ? [...x].reverse.join('') : x))
     .join(' ');
+
+//Edabit: split strings by size n, adding delimiter
+function splitAndDelimit(str, num, del) {
+  let start = 0;
+  let end = num;
+  let sum = [];
+  for (let i = 0; i < str.length / num; i++) {
+    sum.push([...str].slice(start, end).join(''));
+    start += num;
+    end += num;
+  }
+  return sum.join(del);
+}
+/*
+better solution: 
+function splitAndDelimit(str, num, del) {
+	var r = [];
+	for (var i = 0; i < str.length; i += num) {
+		r.push(str.substring(i,i+num));
+	}
+}
+	return r.join(del);
+  */
