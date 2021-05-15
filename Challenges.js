@@ -190,3 +190,10 @@ function splitAndDelimit(str, num, del) {
 
 //Edabit: Histogram Creator given an array of nums and a char
 const histogram = (arr, char) => arr.map(x => char.repeat(x)).join('\n');
+
+//Edabit: replace vowels with num then sum (in this challenge, letters 'i' & 'u' were not used but can be included)
+const sumofVowels = str => {
+  let vowel = { a: 4, e: 3, i: 1, sum: 0 };
+  str.toLowerCase().replace(/[aei]/g, x => (vowel.sum += vowel[x]));
+  return vowel.sum;
+};
