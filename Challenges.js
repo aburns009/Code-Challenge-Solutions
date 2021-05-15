@@ -39,7 +39,7 @@ const evenlyDivisible = (a, b, c) => {
   return sum;
 };
 
-//Edabit: Obscure string challenge it takes 0.5 seconds to write a character (not including spaces).
+//Edabit: Obscure string challenge -  it takes 0.5 seconds to write a character (not including spaces).
 //Given the full sentence and the unfinished sentence as inputs, return the time it takes to finish writing in seconds.
 const timeToFinish = (f, p) =>
   f === p ? 0 : f.slice(-(f.length - p.length)).replace(/\s/g, '').length * 0.5;
@@ -187,3 +187,6 @@ function splitAndDelimit(str, num, del) {
 }
 	return r.join(del);
   */
+
+//Edabit: Histogram Creator given an array of nums and a char
+const histogram = (arr, char) => arr.map(x => char.repeat(x)).join('\n');
