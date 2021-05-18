@@ -197,3 +197,6 @@ const sumofVowels = str => {
   str.toLowerCase().replace(/[aei]/g, x => (vowel.sum += vowel[x]));
   return vowel.sum;
 };
+
+//Edabit: return object keys & values in array
+const keysAndValues = obj => [Object.keys(obj), Object.values(obj)];
