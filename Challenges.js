@@ -200,3 +200,15 @@ const sumofVowels = str => {
 
 //Edabit: return object keys & values in array
 const keysAndValues = obj => [Object.keys(obj), Object.values(obj)];
+
+//Edabit: calculate user score in an object
+const getXP = obj => {
+  let sum = 0;
+  const arr = [5, 10, 20, 40, 80];
+  for (let i = 0; i < 5; i++) {
+    sum += Object.values(obj)[i] * arr[i];
+  }
+  return sum + 'XP';
+};
+/*Best Solution: const getXP = obj => Object.values(obj).reduce((t, c, i) => 
+                                        t + [5, 10, 20, 40, 80][i] * c, 0) + 'XP'; */
