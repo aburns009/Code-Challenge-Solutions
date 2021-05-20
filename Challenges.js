@@ -212,3 +212,16 @@ const getXP = obj => {
 };
 /*Best Solution: const getXP = obj => Object.values(obj).reduce((t, c, i) => 
                                         t + [5, 10, 20, 40, 80][i] * c, 0) + 'XP'; */
+
+//Edabit: Given unique scores for each letter in alphabet, return statement based on sum of each letter
+//example const scores = {"A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,
+const nameScore = name => {
+  const score = name.split('').reduce((a, b) => a + scores[b], 0);
+  return score <= 60
+    ? 'NOT TOO GOOD'
+    : score <= 300
+    ? 'PRETTY GOOD'
+    : score <= 599
+    ? 'VERY GOOD'
+    : 'THE BEST';
+};
