@@ -1,10 +1,6 @@
-const nameScore = name => {
-  const score = name.split('').reduce((a, b) => a + scores[b], 0);
-  return score <= 60
-    ? 'NOT TOO GOOD'
-    : score <= 300
-    ? 'PRETTY GOOD'
-    : score <= 599
-    ? 'VERY GOOD'
-    : 'THE BEST';
+const starRating = arr => {
+  const mean = (
+    arr.reduce((a, b, i) => a + b * (i + 1)) / arr.reduce((a, b) => a + b)
+  ).toFixed(2);
+  return `[${mean}] ${'*'.repeat(Math.round(mean))}`;
 };

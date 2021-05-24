@@ -225,3 +225,12 @@ const nameScore = name => {
     ? 'VERY GOOD'
     : 'THE BEST';
 };
+
+//Edabit: Given an array of star ratings(1 - 5), calculate the mean.
+const starRating = arr => {
+  const mean = (
+    arr.reduce((a, b, i) => a + b * (i + 1)) / arr.reduce((a, b) => a + b)
+  ).toFixed(2);
+  return `[${mean}] ${'*'.repeat(Math.round(mean))}`;
+};
+//[55, 67, 98, 115, 61] => "[3.57] ****"
