@@ -238,3 +238,7 @@ const starRating = arr => {
 //Edabit: modify array by adding n*2 to odd nums and subtracting n*2 to even nums
 const evenOddTransform = (arr, n) =>
   arr.map(x => (x % 2 != 0 ? x + n * 2 : x - n * 2));
+
+//Edabit: calculate average word length in a string omitting punctuation
+const averageWordLength = str =>
+  +(str.replace(/[^a-z]/gi, '').length / str.split(' ').length).toFixed(2);
