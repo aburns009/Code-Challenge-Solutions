@@ -1,2 +1,4 @@
-const averageWordLength = str =>
-  +(str.replace(/[^a-z]/gi, '').length / str.split(' ').length).toFixed(2);
+const vowelLinks = str => {
+  const res = /[aeiou] [aeiou]/gi;
+  return res.test(str);
+};
