@@ -244,7 +244,4 @@ const averageWordLength = str =>
   +(str.replace(/[^a-z]/gi, '').length / str.split(' ').length).toFixed(2);
 
 //Edabit: test is a string contains a word ending with a vowel adjacent to a word beginning with a vowel
-const vowelLinks = str => {
-  const res = /[aeiou] [aeiou]/gi;
-  return res.test(str);
-};
+const vowelLinks = str => /[aeiou] [aeiou]/gi.test(str);
