@@ -245,3 +245,9 @@ const averageWordLength = str =>
 
 //Edabit: test is a string contains a word ending with a vowel adjacent to a word beginning with a vowel
 const vowelLinks = str => /[aeiou] [aeiou]/gi.test(str);
+
+//Edabit: Wrap Around, produce wordwrap effect
+const wrapAround = (string, offset) => {
+  if (Math.abs(offset) > string.length) offset = offset % string.length;
+  return string.slice(offset) + string.slice(0, offset);
+};
