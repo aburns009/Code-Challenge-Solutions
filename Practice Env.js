@@ -1,4 +1,4 @@
-const wrapAround = (string, offset) => {
-  if (Math.abs(offset) > string.length) offset = offset % string.length;
-  return string.slice(offset) + string.slice(0, offset);
-};
+const extendVowels = (word, num) =>
+  !Number.isInteger(num) || num < 0
+    ? 'invalid'
+    : word.replace(/[aeiou]/gi, x => x.repeat(num + 1));
