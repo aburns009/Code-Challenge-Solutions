@@ -270,3 +270,15 @@ function doubleSwap(str, c1, c2) {
   }
   return swap.join('');
 }
+
+//Edabit: camel case any string. str may include underscore
+function camelCasing(str) {
+  let res = str.toLowerCase().replace(/_/g, ' ').split(' ');
+  for (let i = 1; i < res.length; i++) {
+    res[i] = res[i][0].toUpperCase() + res[i].slice(1);
+  }
+  return res.join('');
+}
+//Best Solution:
+const camelCasing = str =>
+  str.toLowerCase().replace(/[\s_](.)/g, (_, m) => m.toUpperCase());
