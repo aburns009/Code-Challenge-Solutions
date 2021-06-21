@@ -282,3 +282,16 @@ function camelCasing(str) {
 //Best Solution:
 const camelCasing = str =>
   str.toLowerCase().replace(/[\s_](.)/g, (_, m) => m.toUpperCase());
+
+//Edabit: Karaca's Encryption Algorithm Solution
+const encrypt = word => {
+  let revWord = [...word].reverse().join('');
+  const vowels = {
+    a: 0,
+    e: 1,
+    i: 2,
+    o: 3,
+    u: 3,
+  };
+  return revWord.replace(/[aeiou]g/, x => vowels[x]) + 'aca';
+};
