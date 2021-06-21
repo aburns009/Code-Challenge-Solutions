@@ -295,3 +295,10 @@ const encrypt = word => {
   };
   return revWord.replace(/[aeiou]g/, x => vowels[x]) + 'aca';
 };
+
+//Edabit: reformat bigint by adding decimal
+const formatBigInt = (bigNumber, decimals) => {
+  let sum = bigNumber.toString().split('');
+  sum.splice(-decimals, 0, '.');
+  return sum.join('');
+};
