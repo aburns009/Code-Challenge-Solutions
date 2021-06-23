@@ -302,3 +302,16 @@ const formatBigInt = (bigNumber, decimals) => {
   sum.splice(-decimals, 0, '.');
   return sum.join('');
 };
+
+//Edabit: "Where's my glasses?" challenge
+const findGlasses = arr => {
+  let sum;
+  arr.map((x, i) => {
+    if (/O\-+O/.test(x)) {
+      sum = i;
+    }
+  });
+  return sum;
+};
+//Best Solution:
+const findGlasses = glasses => glasses.findIndex(glass => /O-+O/.test(glass));
