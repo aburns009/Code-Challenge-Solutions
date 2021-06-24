@@ -315,3 +315,17 @@ const findGlasses = arr => {
 };
 //Best Solution:
 const findGlasses = glasses => glasses.findIndex(glass => /O-+O/.test(glass));
+
+//Edabit: loves me, loves me not challenge. given a number, alternate between love me/love me not beginning with 'loves me', last element must be all caps.
+const lovesMe = n => {
+  let glove = [];
+  for (let i = 0; i < n; i++) {
+    if (i % 2 === 0) {
+      glove.push('Loves me');
+    } else {
+      glove.push('Loves me not');
+    }
+  }
+  glove[glove.length - 1] = glove[glove.length - 1].toUpperCase();
+  return glove.join(', ');
+};
