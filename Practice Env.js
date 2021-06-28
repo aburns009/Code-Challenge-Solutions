@@ -1,12 +1,10 @@
-const lovesMe = n => {
-  let glove = [];
-  for (let i = 0; i < n; i++) {
-    if (i % 2 === 0) {
-      glove.push('Loves me');
-    } else {
-      glove.push('Loves me not');
-    }
-  }
-  glove[glove.length - 1] = glove[glove.length - 1].toUpperCase();
-  return glove.join(', ');
+const evenOrOdd = str => {
+  let odd = 0;
+  let even = 0;
+  [...str].map(x => (x % 2 != 0 ? (odd += +x) : (even += +x)));
+  if (odd > even) {
+    return 'Odd is greater than Even';
+  } else if (even > odd) {
+    return 'Even is greater than Odd';
+  } else return 'Even and Odd are the same';
 };
