@@ -341,3 +341,17 @@ const evenOrOdd = str => {
     return 'Even is greater than Odd';
   } else return 'Even and Odd are the same';
 };
+
+//Edabit: Like or Dislike toggler
+const likeOrDislike = arr => {
+  let state = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === state) state = 'Nothing';
+    else if (arr[i] === 'Like') state = 'Like';
+    else state = 'Dislike';
+  }
+  return state || 'Nothing';
+};
+//Best Solution:
+const likeOrDislike = arr =>
+  arr.reduce((a, b) => (a === b ? 'Nothing' : b), 'Nothing');
