@@ -365,3 +365,5 @@ const halfLifeCalculator = (mass, hlife, n) => {
   }
   return [+mass.toFixed(3), hlife * n];
 };
+
+//Edabit: find second occurence of a word in a string
