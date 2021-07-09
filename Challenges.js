@@ -367,3 +367,24 @@ const halfLifeCalculator = (mass, hlife, n) => {
 };
 
 //Edabit: find second occurence of a word in a string
+const findZip = str => str.indexOf('zip', str.indexOf('zip' + 1));
+
+//Edabit: dna to mRNA converter
+const dnaToRna = dna => {
+  const rna = {
+    A: 'U',
+    T: 'A',
+    C: 'G',
+    G: 'C',
+  };
+  return dna.replace(/[ATCG]/g, x => rna[x]);
+};
+
+//Edabit: Reverse string and alternate casing
+const reverse = str =>
+  [...str]
+    .reverse()
+    .map(x =>
+      x === x.toLowerCase() ? (x = x.toUpperCase()) : (x = x.toLowerCase())
+    )
+    .join('');
