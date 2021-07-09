@@ -388,3 +388,6 @@ const reverse = str =>
       x === x.toLowerCase() ? (x = x.toUpperCase()) : (x = x.toLowerCase())
     )
     .join('');
+
+//Edabit: verify one array is subset of another array
+const isSubset = (arr1, arr2) => arr1.every(x => arr2.includes(x));
