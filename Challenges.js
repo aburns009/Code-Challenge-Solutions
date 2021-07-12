@@ -391,3 +391,7 @@ const reverse = str =>
 
 //Edabit: verify one array is subset of another array
 const isSubset = (arr1, arr2) => arr1.every(x => arr2.includes(x));
+
+//Edabit: Sort number by length
+const numberLenSort = arr =>
+  arr.sort((a, b) => a.toString().length - b.toString().length);
