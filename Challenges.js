@@ -398,3 +398,9 @@ const numberLenSort = arr =>
 
 //Edabit: find index of NaN
 const findNaN = number => number.findIndex(x => isNaN(x));
+
+//Edabit: return number of arrays within an array
+const numOfSubarrays = arr =>
+  arr.map(x => (Array.isArray(x) ? arr.length : 0))[0];
+//best solution:
+const numOfSubarrays = arr => arr.filter(a => a instanceof Array).length;
