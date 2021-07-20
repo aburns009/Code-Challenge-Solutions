@@ -1,1 +1,2 @@
-const findZip = str => str.indexOf('zip', str.indexOf('zip' + 1));
+const filterUnique = arr =>
+  arr.filter(x => [...new Set(x)].length === x.length);

@@ -404,3 +404,9 @@ const numOfSubarrays = arr =>
   arr.map(x => (Array.isArray(x) ? arr.length : 0))[0];
 //best solution:
 const numOfSubarrays = arr => arr.filter(a => a instanceof Array).length;
+
+//Edabit: return subarrays that contain only unique items
+const filterUnique = arr =>
+  arr.filter(x => [...new Set(x)].length === x.length);
+//Best Solution:
+const filterUnique = arr => arr.filter(x => new Set(x).size === x.length);
