@@ -410,3 +410,7 @@ const filterUnique = arr =>
   arr.filter(x => [...new Set(x)].length === x.length);
 //Best Solution:
 const filterUnique = arr => arr.filter(x => new Set(x).size === x.length);
+
+//Edabit: sum indexes of array elements that match value n
+const sumFoundIndexes = (arr, n) =>
+  arr.reduce((a, b, i) => a + (b != n ? 0 : i), 0);
