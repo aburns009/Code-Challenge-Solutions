@@ -414,3 +414,11 @@ const filterUnique = arr => arr.filter(x => new Set(x).size === x.length);
 //Edabit: sum indexes of array elements that match value n
 const sumFoundIndexes = (arr, n) =>
   arr.reduce((a, b, i) => a + (b != n ? 0 : i), 0);
+
+//Edabit: in an array, return occurences of positive numbers and sum of negatives
+function countPosSumNeg(arr) {
+  let pos = 0;
+  let neg = 0;
+  arr.map(x => (x != Math.abs(x) ? (neg += x) : pos++));
+  return arr.length > 1 ? [pos, neg] : [];
+}
