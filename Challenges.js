@@ -422,3 +422,6 @@ function countPosSumNeg(arr) {
   arr.map(x => (x != Math.abs(x) ? (neg += x) : pos++));
   return arr.length > 1 ? [pos, neg] : [];
 }
+
+//Edabit remove 1/10 of values from a string. always round up
+const DECIMATOR = str => str.substr(0, str.length - Math.ceil(str.length / 10));
