@@ -425,3 +425,10 @@ function countPosSumNeg(arr) {
 
 //Edabit remove 1/10 of values from a string. always round up
 const DECIMATOR = str => str.substr(0, str.length - Math.ceil(str.length / 10));
+
+//Edabit: in a string, reverse words with a length greater than 4
+const reverse = str =>
+  str
+    .split(' ')
+    .map(x => (x.length > 4 ? [...x].reverse().join('') : x))
+    .join(' ');
