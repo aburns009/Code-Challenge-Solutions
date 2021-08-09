@@ -1,2 +1,6 @@
-const filterUnique = arr =>
-  arr.filter(x => [...new Set(x)].length === x.length);
+const indexShuffle = str => {
+  let even = '';
+  let odd = '';
+  [...str].map((x, i) => (i % 2 != 0 ? (odd += x) : (even += x)));
+  return even + odd;
+};

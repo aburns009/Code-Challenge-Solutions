@@ -432,3 +432,11 @@ const reverse = str =>
     .split(' ')
     .map(x => (x.length > 4 ? [...x].reverse().join('') : x))
     .join(' ');
+
+//Edabit: Index shuffle. separate evens and odds, then concat
+const indexShuffle = str => {
+  let even = '';
+  let odd = '';
+  [...str].map((x, i) => (i % 2 != 0 ? (odd += x) : (even += x)));
+  return even + odd;
+};
