@@ -440,3 +440,9 @@ const indexShuffle = str => {
   [...str].map((x, i) => (i % 2 != 0 ? (odd += x) : (even += x)));
   return even + odd;
 };
+
+//Edabit: determine if sum of an array is odd or even
+const evenOrOdd = arr => {
+  if (arr.length < 1) return 'even';
+  return arr.reduce((a, b) => a + b) % 2 === 0 ? 'even' : 'odd';
+};
