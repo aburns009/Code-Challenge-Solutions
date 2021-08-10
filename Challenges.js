@@ -446,3 +446,6 @@ const evenOrOdd = arr => {
   if (arr.length < 1) return 'even';
   return arr.reduce((a, b) => a + b) % 2 === 0 ? 'even' : 'odd';
 };
+
+//Edabit: Given an array of ones and zeroes, return the decimal value.
+const binaryToDecimal = arr => parseInt(arr.join(''), 2);
