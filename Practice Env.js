@@ -1,8 +1,7 @@
-const zipIt = (women, men) => {
-  let zip = [];
-  if (men.length != women.length) return "sizes don't match";
-  for (let i = 0; i < women.length; i++) {
-    zip.push(Array(women[i], men[i]));
-  }
-  return zip;
+const fruitSalad = arr => {
+  let fruit = [];
+  arr.map(x =>
+    fruit.push(x.slice(0, Math.floor(x.length / 2)), x.slice(x.length / 2))
+  );
+  return fruit.sort().join('');
 };

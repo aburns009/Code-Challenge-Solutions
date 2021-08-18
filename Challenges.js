@@ -459,3 +459,12 @@ const zipIt = (women, men) => {
   }
   return zip;
 };
+
+//Edabit: fruit salad challenge, given an array of strings, slice each string in half, sort, and combine to a single string
+const fruitSalad = arr => {
+  let fruit = [];
+  arr.map(x =>
+    fruit.push(x.slice(0, Math.floor(x.length / 2)), x.slice(x.length / 2))
+  );
+  return fruit.sort().join('');
+};
