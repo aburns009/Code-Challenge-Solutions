@@ -1,6 +1,8 @@
-const indexShuffle = str => {
-  let even = '';
-  let odd = '';
-  [...str].map((x, i) => (i % 2 != 0 ? (odd += x) : (even += x)));
-  return even + odd;
+const zipIt = (women, men) => {
+  let zip = [];
+  if (men.length != women.length) return "sizes don't match";
+  for (let i = 0; i < women.length; i++) {
+    zip.push(Array(women[i], men[i]));
+  }
+  return zip;
 };

@@ -449,3 +449,13 @@ const evenOrOdd = arr => {
 
 //Edabit: Given an array of ones and zeroes, return the decimal value.
 const binaryToDecimal = arr => parseInt(arr.join(''), 2);
+
+//Edabit: zip it if you can, combine elements from multiple arrays based on challenge requirements.
+const zipIt = (women, men) => {
+  let zip = [];
+  if (men.length != women.length) return "sizes don't match";
+  for (let i = 0; i < women.length; i++) {
+    zip.push(Array(women[i], men[i]));
+  }
+  return zip;
+};
